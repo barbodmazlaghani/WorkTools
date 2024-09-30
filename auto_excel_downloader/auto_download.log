@@ -1,0 +1,45 @@
+2024-09-30 09:43:55,528 - INFO - Process started.
+2024-09-30 09:43:57,492 - INFO - Fetched 11 cars from API.
+2024-09-30 09:43:57,493 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,493 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,493 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,493 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,494 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,494 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,494 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,494 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,495 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,496 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,496 - WARNING - Car ID not found in car data.
+2024-09-30 09:43:57,496 - INFO - Process completed.
+2024-09-30 11:24:39,202 - INFO - Process started.
+2024-09-30 11:24:40,434 - INFO - Fetched 11 cars from API.
+2024-09-30 11:24:40,434 - INFO - Starting download for Car ID: jbu5LCjzbkxgAvzYta8sax from 1712130880 to 1727682880
+2024-09-30 11:25:41,154 - ERROR - Failed to download Excel for Car ID: jbu5LCjzbkxgAvzYta8sax, Status Code: 503
+2024-09-30 11:25:41,155 - ERROR - Error downloading for Car ID jbu5LCjzbkxgAvzYta8sax: Failed to download Excel for Car ID: jbu5LCjzbkxgAvzYta8sax, Status Code: 503
+2024-09-30 11:25:41,156 - INFO - Starting download for Car ID: ikMJs2YfoNJSggFwt5oaVK from 1712130941 to 1727682880
+2024-09-30 11:26:53,538 - INFO - Process started.
+2024-09-30 11:26:54,620 - INFO - Fetched 11 cars from API.
+2024-09-30 11:26:54,621 - INFO - Starting download for Car ID: jbu5LCjzbkxgAvzYta8sax from 1712131014 to 1727683014
+2024-09-30 11:29:15,720 - INFO - Successfully downloaded Excel for Car ID: jbu5LCjzbkxgAvzYta8sax to jbu5LCjzbkxgAvzYta8sax_1712131014_1727683014.xlsx
+2024-09-30 11:29:15,723 - INFO - Starting download for Car ID: ikMJs2YfoNJSggFwt5oaVK from 1712131155 to 1727683014
+2024-09-30 11:33:34,422 - INFO - Successfully downloaded Excel for Car ID: ikMJs2YfoNJSggFwt5oaVK to ikMJs2YfoNJSggFwt5oaVK_1712131155_1727683014.xlsx
+2024-09-30 11:33:34,425 - INFO - Starting download for Car ID: BoDGJeQh4cUdYZ2LKpQTVq from 1712131414 to 1727683014
+2024-09-30 11:42:53,492 - ERROR - Error downloading for Car ID BoDGJeQh4cUdYZ2LKpQTVq: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2024-09-30 11:42:53,492 - INFO - Starting download for Car ID: efRPT2v6SVdb5whmY2tnKX from 1712131973 to 1727683014
+2024-09-30 11:43:07,123 - INFO - Successfully downloaded Excel for Car ID: efRPT2v6SVdb5whmY2tnKX to efRPT2v6SVdb5whmY2tnKX_1712131973_1727683014.xlsx
+2024-09-30 11:43:07,127 - INFO - Starting download for Car ID: gcpWrp2P5xesmrEXE8fdUN from 1712131987 to 1727683014
+2024-09-30 11:43:10,462 - INFO - Successfully downloaded Excel for Car ID: gcpWrp2P5xesmrEXE8fdUN to gcpWrp2P5xesmrEXE8fdUN_1712131987_1727683014.xlsx
+2024-09-30 11:43:10,465 - INFO - Starting download for Car ID: EJzh2zYPHj94dWKb42Ye9L from 1712131990 to 1727683014
+2024-09-30 11:43:13,462 - INFO - Successfully downloaded Excel for Car ID: EJzh2zYPHj94dWKb42Ye9L to EJzh2zYPHj94dWKb42Ye9L_1712131990_1727683014.xlsx
+2024-09-30 11:43:13,465 - INFO - Starting download for Car ID: GwpM7nAsPHouwPukJJDNUM from 1712131993 to 1727683014
+2024-09-30 11:45:35,868 - INFO - Successfully downloaded Excel for Car ID: GwpM7nAsPHouwPukJJDNUM to GwpM7nAsPHouwPukJJDNUM_1712131993_1727683014.xlsx
+2024-09-30 11:45:35,872 - INFO - Starting download for Car ID: PLQqCbSrFh4ECzrHRMqLKg from 1712132135 to 1727683014
+2024-09-30 11:45:38,385 - INFO - Successfully downloaded Excel for Car ID: PLQqCbSrFh4ECzrHRMqLKg to PLQqCbSrFh4ECzrHRMqLKg_1712132135_1727683014.xlsx
+2024-09-30 11:45:38,389 - INFO - Starting download for Car ID: RpPxTMgpLgTMEoiXo2rVuD from 1712132138 to 1727683014
+2024-09-30 11:46:23,504 - INFO - Successfully downloaded Excel for Car ID: RpPxTMgpLgTMEoiXo2rVuD to RpPxTMgpLgTMEoiXo2rVuD_1712132138_1727683014.xlsx
+2024-09-30 11:46:23,508 - INFO - Starting download for Car ID: fTzmtNw5UREpSMdzyKHhax from 1712132183 to 1727683014
+2024-09-30 11:46:26,215 - INFO - Successfully downloaded Excel for Car ID: fTzmtNw5UREpSMdzyKHhax to fTzmtNw5UREpSMdzyKHhax_1712132183_1727683014.xlsx
+2024-09-30 11:46:26,216 - INFO - Starting download for Car ID: WzMtJbNxH5JZidBHP75nFt from 1712132186 to 1727683014
+2024-09-30 11:46:30,070 - INFO - Successfully downloaded Excel for Car ID: WzMtJbNxH5JZidBHP75nFt to WzMtJbNxH5JZidBHP75nFt_1712132186_1727683014.xlsx
+2024-09-30 11:46:30,072 - INFO - Process completed.
