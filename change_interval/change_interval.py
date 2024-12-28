@@ -6,10 +6,12 @@ import numpy as np
 # ==========================
 
 # Path to your input Excel file
-input_file = 'K125_NEDC_NIMA.xlsx'  # Update this path
+input_files = "C:/Users/s_alizadehnia/Desktop/LightoffTimePrediction/NEDC_CSV/NEDC - Clean/DENA_TC+_MT_BARBOD"  # Update this path
+
+input_file = f"{input_files}.csv"  # Update this path
 
 # Path for the output resampled Excel file
-output_file = 'resampled_data_NEDC.xlsx'  # Update this path
+output_file = f"{input_files}_clean1.csv"  # Update this path
 
 # Sheet name in the Excel file
 sheet_name = 'K125_NIMA'  # Update if different
@@ -31,7 +33,10 @@ aggregation_method = 'mean'  # Options: 'mean', 'sum', 'first', 'last', etc.
 # ==========================
 
 try:
-    df = pd.read_excel(input_file, sheet_name=sheet_name)
+    # df = pd.read_excel(input_file, sheet_name=sheet_name)
+    df = pd.read_csv(input_file,low_memory=False)
+    # df =df.fillna(0)
+    print(df)
     print("Excel file loaded successfully.")
 except Exception as e:
     print(f"Error reading Excel file: {e}")
@@ -50,8 +55,8 @@ if time_column not in df.columns:
 # ==========================
 
 # Convert 'time' from milliseconds to seconds
-df['time_sec'] = df[time_column] / 1000.0
-
+# df['time_sec'] = df[time_column] / 1000.0
+df['time_sec'] = df[time_column]
 # ==========================
 # Step 4: Sort the DataFrame by 'time_sec'
 # ==========================
@@ -101,7 +106,7 @@ grouped.drop(columns=['time_bin'], inplace=True)
 # ==========================
 
 try:
-    grouped.to_excel(output_file, index=False)
+    grouped.to_csv(output_file, index=False)
     print(f"Resampled data saved successfully to {output_file}")
 except Exception as e:
     print(f"Error saving resampled data: {e}")
