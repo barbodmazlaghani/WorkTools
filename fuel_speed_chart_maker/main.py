@@ -61,6 +61,11 @@ def process_excel_file(file_path, output_dir, poly_degrees=[1, 2, 3]):
         filtered_df['trip_speed_avg'] = pd.to_numeric(filtered_df['trip_speed_avg'], errors='coerce')
         filtered_df['trip_fuel_consumption_avg'] = pd.to_numeric(filtered_df['trip_fuel_consumption_avg'],
                                                                  errors='coerce')
+        filtered_df['trip_speed_avg'] = filtered_df['trip_speed_avg'].apply(lambda x: round(x / 10) * 10)
+
+        filtered_df = filtered_df[(filtered_df['trip_speed_avg'] >= 0) & (filtered_df['trip_speed_avg'] <= 100)]
+        filtered_df = filtered_df[
+            (filtered_df['trip_fuel_consumption_avg'] >= 5) & (filtered_df['trip_fuel_consumption_avg'] <= 35)]
 
         # Drop rows with NaN values in the relevant columns
         plot_df = filtered_df.dropna(subset=['trip_speed_avg', 'trip_fuel_consumption_avg'])
@@ -73,6 +78,9 @@ def process_excel_file(file_path, output_dir, poly_degrees=[1, 2, 3]):
         plt.figure(figsize=(10, 6))
         plt.scatter(plot_df['trip_speed_avg'], plot_df['trip_fuel_consumption_avg'],
                     alpha=0.7, edgecolors='b', label='Trips')
+
+        plt.xlim(0, 100)  # Limit x-axis to 0–100 for speed
+        plt.ylim(0, 35)  # Limit y-axis to 5–35 for fuel consumption
 
         # Add titles and labels
         plt.title(f'Average Speed vs. Fuel Consumption for {os.path.basename(file_path)}\n(Trips > 1 km)')
@@ -98,7 +106,8 @@ def process_excel_file(file_path, output_dir, poly_degrees=[1, 2, 3]):
 
             # Plot the trendline
             style = trendline_styles.get(degree, {})
-            plt.plot(x_trend, y_trend, linestyle=style.get('linestyle', '--'),
+            if degree == 2 :
+                plt.plot(x_trend, y_trend, linestyle=style.get('linestyle', '--'),
                      color=style.get('color', 'black'),
                      label=style.get('label', f'Polynomial Trend Line (Degree {degree})'))
 
