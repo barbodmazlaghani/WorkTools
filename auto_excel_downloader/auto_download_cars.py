@@ -10,7 +10,7 @@ API_BASE_URL = "http://130.185.77.114/api"
 GET_CARS_ENDPOINT = "/get-cars/"
 DOWNLOAD_HISTORY_ENDPOINT_TEMPLATE = "/history/carID/{car_id}/"
 
-AUTH_TOKEN = "bf8f82ecff0102edca5a59936ad2dfe3690f05aa"
+AUTH_TOKEN = "c8b88ea4c624f01e9329c57e5196abfd0bc39628"
 HEADERS = {
     "authorization": f"Token {AUTH_TOKEN}"
 }
@@ -96,14 +96,14 @@ def process_cars():
         last_to_time = cars_state.get(car_id, {}).get("last_to_time")
         if last_to_time:
             last_download_date = datetime.fromtimestamp(last_to_time)
-            six_months_ago = datetime.now() - timedelta(days=180)
-            if last_download_date > six_months_ago:
-                logging.info(f"Six months have not passed since last download for Car ID: {car_id}. Skipping.")
+            three_months_ago = datetime.now() - timedelta(days=90)
+            if last_download_date > three_months_ago:
+                logging.info(f"Three months have not passed since last download for Car ID: {car_id}. Skipping.")
                 continue
             else:
                 from_time = last_to_time + 1  # Start right after the last download
         else:
-            # If no previous download, set from_time to six months ago
+            # If no previous download, set from_time to three months ago
             six_months_ago = datetime.now() - timedelta(days=180)  # Approximate 6 months
             from_time = int(time.mktime(six_months_ago.timetuple()))
 

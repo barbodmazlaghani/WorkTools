@@ -1,0 +1,26 @@
+/* src/index.css */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+  /* AI-ish gradient */
+  color: #fff; /* We'll use a light font color */
+}
+@font-face {
+  font-family: 'Iranian Sans';
+  src: local('Iranian Sans'),
+  url('./assets/fonts/IranianSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  font-family: Iranian Sans, sans-serif;
+}
+/* We’ll also switch direction to RTL for Persian text */
+body {
+  direction: rtl;
+  font-family: Iranian Sans, sans-serif;
+}
